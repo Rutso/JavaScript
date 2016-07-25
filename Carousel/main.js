@@ -3,6 +3,7 @@
  */
 'use strict';
 (function () {
+    
     var navList = document.getElementsByTagName('ul')[0];
     var handle = document.getElementsByClassName('handle')[0];
     var imgs = Array.from(document.getElementsByTagName('img'));
