@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    width: 100%;
+}
+nav ul {
+    background-color: #43a286;
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    -webkit-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li:hover {
+    background-color: #399077;
+}
+
+section {
+    line-height: 1.5em;
+    font-size: 0.9em;
+    padding: 40px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.handle {
+    width: 100%;
+    background-color: #005c48;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+@media screen and (max-width: 580px) {
+    nav ul {
+        max-height: 0;
+    }
+    .showing {
+        max-height: 20em; /*Big enough to contain the nav list*/
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+        text-align: left;
+    }
+    .handle {
+        display: block;
+    }
+}
+
+.images-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.images-wrapper img {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    transition: transform .4s ease-in-out;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.5;
+    bottom: 10%;
+
+}
+.arrow-right {
+    border-left: 60px solid #fdfdfe;
+    right: 0;
+}
+.arrow-left {
+    border-right: 60px solid #fdfdfe;
+}
+
+/*
+.slider {
+    position: relative;
+    display: flex;
+}*/
+
+.circles {
+    position: absolute;
+    z-index: 2;
+    bottom: 10%;
+    /*background-color: #667d80;*/
+    width: 200px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.outer-circle {
+    position: relative;
+    /*background-color: #005c48;*/
+    box-sizing: border-box;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.inner-circle {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px auto 0 auto;
+    top: 50%;
+    visibility: hidden;
+}
+
